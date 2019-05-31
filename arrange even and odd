@@ -1,0 +1,24 @@
+// You are using GCC
+#include<stdio.h>
+int main()
+{
+    int pv=1,pv1=1,num,rem,ans1=0,ans2=0,ans;
+    scanf("%d",&num);
+    while(num!=0)
+    {
+        rem=num%10;
+        if(rem%2==0)
+        {
+            ans1=(rem*pv)+ans1;
+            pv=pv*10;
+        }
+        else
+        {
+            ans2=(rem*pv1)+ans2;
+            pv1=pv1*10;
+        }
+        num=num/10;
+    }
+    ans=(ans1*pv1)+ans2;
+    printf("%d",ans);
+}
